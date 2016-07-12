@@ -1,0 +1,22 @@
+﻿[
+  {
+    "id": 1,
+    "text": "广告位分类",
+    "attributes": { "href": "banner_category/manage" }
+  },
+  {
+    "id": 2,
+    "text": "广告位管理",
+    "attributes": { "href": "banner/manage" }
+  },
+  {
+    "id": 3,
+    "text": "淘宝客管理",
+    "attributes": { "href": "TbkItem/manage" }
+  },
+  {
+    "id": 4,
+    "text": "选品库管理",
+    "attributes": { "href": "TbkFavorites/manage" }
+  }
+]
