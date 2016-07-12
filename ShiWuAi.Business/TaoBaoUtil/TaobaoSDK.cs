@@ -66,7 +66,7 @@ namespace ShiWuAi.Business.TaoBaoUtil
             req.Platform = 2L;
             req.AdzoneId = adzoneId;
             req.FavoritesId = favoritesId;
-            req.Fields = "num_iid,title,pict_url,small_images,reserve_price,zk_final_price,user_type,provcity,item_url,seller_id,volume,nick,shop_title,zk_final_price_wap,event_start_time,event_end_time,tk_rate,status,type";
+            req.Fields = "num_iid,title,pict_url,small_images,click_url,reserve_price,zk_final_price,user_type,provcity,item_url,seller_id,volume,nick,shop_title,zk_final_price_wap,event_start_time,event_end_time,tk_rate,status,type";
             TbkUatmFavoritesItemGetResponse response = client.Execute(req);
             return response.Body;
         }

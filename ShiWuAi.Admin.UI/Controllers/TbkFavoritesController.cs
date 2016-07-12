@@ -93,26 +93,28 @@ namespace ShiWuAi.Admin.Ui.Controllers
         }
 
         [HttpPost]
-        public string Sync_data(int id)
+        public string Sync_data(int id, string category)
         {
             var favoritesProduct = TaobaoSDK.getTbkFavoritesProduct(id);
             JObject productJObject = JObject.Parse(favoritesProduct);
             JToken products = productJObject["tbk_uatm_favorites_item_get_response"]["results"]["uatm_tbk_item"];
             var resource = new Resource("A6904928073012", "C0DF9412-536D-7A7B-05CF-56813C7AD0EF");
-            
+            var tbk_product = resource.Factory("tbk_product");
             var list = new List<Object>();
-            string i = "a";
             foreach (JToken product in products)
             {
+                product["category"] = category;
+                tbk_product.Create(JsonConvert.SerializeObject(product));
+                //list.Add(new
+                //{
 
-                list.Add(new
-                {
-                    method = "POST",
-                    path = "/mcm/api/tbk_product",
-                    data = "{num_iid:1}"
-                });
+                //    method = "POST",
+                //    path = "https://d.apicloud.com/mcm/api/tbk_product",
+                //    data = JsonConvert.SerializeObject(product)
+                //});
+                //tbk_product.Create(JsonConvert.SerializeObject(product));
             }
-            resource.Batch(list);
+            //var ret = resource.Batch(list);
             return favoritesProduct;
         }
 
