@@ -44,14 +44,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="APICloud">
-      <HintPath>..\..\..\DLL\APICloud.dll</HintPath>
+      <HintPath>DLL\APICloud.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="EntityFrameWork.Extend">
-      <HintPath>..\..\..\DLL\EntityFrameWork.Extend.dll</HintPath>
+      <HintPath>DLL\EntityFrameWork.Extend.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
@@ -83,7 +83,7 @@
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
     <Reference Include="TopSdk">
-      <HintPath>..\..\..\SDK\sdk-net-23403271\TopSdk.dll</HintPath>
+      <HintPath>DLL\TopSdk.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

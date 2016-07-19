@@ -83,9 +83,6 @@ namespace ShiWuAi.Admin.Ui.Controllers
             var bs = BsProvider.CreateBusiness<ITbkFavorites>();
             var returnObj = "";
             //新增
-
-
-
             returnObj = Newtonsoft.Json.JsonConvert.SerializeObject(bs.GroupDelete(ids));
 
             return returnObj;
@@ -98,7 +95,7 @@ namespace ShiWuAi.Admin.Ui.Controllers
             var favoritesProduct = TaobaoSDK.getTbkFavoritesProduct(id);
             JObject productJObject = JObject.Parse(favoritesProduct);
             JToken products = productJObject["tbk_uatm_favorites_item_get_response"]["results"]["uatm_tbk_item"];
-            var resource = new Resource("A6904928073012", "C0DF9412-536D-7A7B-05CF-56813C7AD0EF");
+            var resource = new Resource("A6904392737055", "D4124092-1D49-079E-5139-FA911801CED5");
             var tbk_product = resource.Factory("tbk_product");
             var list = new List<Object>();
             foreach (JToken product in products)
